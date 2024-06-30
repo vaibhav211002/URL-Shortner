@@ -12,6 +12,11 @@ app.use('/url', urlRoute);
 app.use('/api', urlRoute);
 app.get('/api',urlRoute)
 
+app.get('/',(req,res)=>{
+    console.log('All Good');
+
+})
+
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
