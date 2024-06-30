@@ -15,10 +15,10 @@ function App() {
 
 
   const handleclick = async ()=>{
-    const response = await axios.post('http://localhost:3001/url',{url})
+    const response = await axios.post('https://url-shortner-git-main-vaibhav211002s-projects.vercel.app/url',{url})
     const data = response.data;
     setresponse(data.data); 
-    const linktoclick = `http://localhost:3001/api/${data.data}`
+    const linktoclick = `https://url-shortner-git-main-vaibhav211002s-projects.vercel.app/api/${data.data}`
     setlink(linktoclick)
   }
 
@@ -32,7 +32,7 @@ function App() {
 
 
   const getspecificanal = async ()=>{ 
-    const reponse = await axios.get(`http://localhost:3001/api/analytics/${coderes}`)
+    const reponse = await axios.get(`https://url-shortner-git-main-vaibhav211002s-projects.vercel.app/api/analytics/${coderes}`)
     const data =reponse.data;
     getSearched(data.url.totalClicks)
   }
