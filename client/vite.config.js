@@ -4,9 +4,4 @@ import reactRefresh from '@vitejs/plugin-react-refresh';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(),reactRefresh()],
-  build: {
-    rollupOptions: {
-      external: ['react-toastify'], // Add react-toastify to external dependencies
-    },
-  },
 })
