@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
-  const url1 = "http://localhost:3001";
+  const url1 = "https://url-shortner-1-ohrv.onrender.com";
   // const url2= 
 
   const [url, seturl] = useState('')
