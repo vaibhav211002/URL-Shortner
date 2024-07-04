@@ -8,8 +8,8 @@ import { useEffect } from 'react';
 
 function App() {
 
-  const url2 = "https://url-shortner-1-ohrv.onrender.com";
-  const url1 = "https://url-shortner-sage-ten.vercel.app";
+  const url1 = "https://url-shortner-1-ohrv.onrender.com";
+  const url2 = "https://url-shortner-sage-ten.vercel.app";
 
   const [url, seturl] = useState('');
   const [response, setresponse] = useState(false);
