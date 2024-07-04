@@ -18,6 +18,9 @@ const urlRoute = require('./routes/url');
 app.use('/url', urlRoute);
 app.use('/api', urlRoute);
 app.get('/api',urlRoute)
+app.get('/test',(req,res)=>{
+    res.status(200).json({message: "Server Initiated"});
+})
 
 app.get('/',(req,res)=>{
     console.log('All Good');

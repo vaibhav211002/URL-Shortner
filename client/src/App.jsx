@@ -4,17 +4,23 @@ import TextField from '@mui/material/TextField';
 import axios from 'axios';
 import {toast,ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useEffect } from 'react';
 
 function App() {
 
   const url2 = "https://url-shortner-1-ohrv.onrender.com";
+<<<<<<< Updated upstream
   const url1 = "https://url-shortner-sage-ten.vercel.app";
+=======
+  const url1 = "http://localhost:3001"
+>>>>>>> Stashed changes
 
-  const [url, seturl] = useState('')
-  const [response, setresponse] = useState(false)
-  const [link, setlink] = useState(false)
-  const [coderes,getcoderes] = useState('')
-  const [Searched ,getSearched] = useState('')
+  const [url, seturl] = useState('');
+  const [response, setresponse] = useState(false);
+  const [link, setlink] = useState(false);
+  const [coderes,getcoderes] = useState('');
+  const [Searched ,getSearched] = useState('');
+  const [loader,setloader] = useState(false);
 
   const handleclick = async ()=>{
     const response = await axios.post(`${url1}/url`,{url})
@@ -24,6 +30,17 @@ function App() {
     setlink(linktoclick)
     seturl('');
   }
+
+  useEffect(()=>{
+    const loader = async () =>{
+      const response = await axios.get(`${url1}/test`)
+      if(response.status === 200){
+        setloader(true)
+      }
+    } 
+    loader();
+
+  },[])
 
   const textRef = useRef(null);
   const getspecificanal = async ()=>{ 
@@ -48,6 +65,7 @@ function App() {
 
   return (
     <>
+    {(loader)?" Working ": " stopped "}
     <ToastContainer />
     <div className='Whole'>
       <div className="container">
