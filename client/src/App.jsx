@@ -26,16 +26,16 @@ function App() {
     seturl('');
   }
 
-  useEffect(()=>{
-    const loader = async () =>{
-      const response = await axios.get(`${url1}/test`)
-      if(response.status === 200){
-        setloader(true)
-      }
-    } 
-    loader();
+  // useEffect(()=>{
+  //   const loader = async () =>{
+  //     const response = await axios.get(`${url1}/test`)
+  //     if(response.status === 200){
+  //       setloader(true)
+  //     }
+  //   } 
+  //   loader();
 
-  },[])
+  // },[])
 
   const textRef = useRef(null);
   const getspecificanal = async ()=>{ 
@@ -60,7 +60,7 @@ function App() {
 
   return (
     <>
-    {(loader)?" Working ": " stopped "}
+    {/* {(loader)?" Working ": " stopped "} */}
     <ToastContainer />
     <div className='Whole'>
       <div className="container">
