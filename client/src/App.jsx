@@ -8,7 +8,9 @@ import { useEffect } from 'react';
 
 function App() {
 
+  
   const url1 = "https://url-shortner-1-ohrv.onrender.com";
+  const url12 = "http://localhost:3001";
 
   const [url, seturl] = useState('');
   const [response, setresponse] = useState(false);
@@ -26,16 +28,16 @@ function App() {
     seturl('');
   }
 
-  // useEffect(()=>{
-  //   const loader = async () =>{
-  //     const response = await axios.get(`${url1}/test`)
-  //     if(response.status === 200){
-  //       setloader(true)
-  //     }
-  //   } 
-  //   loader();
+  useEffect(()=>{
+    const loader = async () =>{
+      const response = await axios.get(`${url1}/test`)
+      if(response.status === 200){
+        setloader(true)
+      }
+    } 
+    loader();
 
-  // },[])
+  },[])
 
   const textRef = useRef(null);
   const getspecificanal = async ()=>{ 
@@ -60,9 +62,9 @@ function App() {
 
   return (
     <>
-    {/* {(loader)?" Working ": " stopped "} */}
+    {(loader)?" Working ": " stopped "}
     <ToastContainer />
-    TEST Branch
+    TEST BRANCH
     <div className='Whole'>
       <div className="container">
         <h2 className="main-heading">Url Shortner </h2>
