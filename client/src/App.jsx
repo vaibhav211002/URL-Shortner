@@ -61,7 +61,7 @@ function App() {
 
   return (
     <>
-    {(loader)?" Working ": " stopped "}
+    {/* {(loader)?" Working ": " stopped "} */}
     <ToastContainer />
     <div className='Whole'>
       <div className="container">
