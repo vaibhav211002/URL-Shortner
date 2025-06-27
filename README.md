@@ -1,5 +1,4 @@
-# Create a README.md file content as a string and save it to a file for download
-readme_content = """
+
 # URL Shortener (MERN Stack)
 
 A full-stack URL shortening service with click tracking and analytics, built as a 4‑week remote internship project at PHICSIT.
