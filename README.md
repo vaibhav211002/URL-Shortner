@@ -8,7 +8,7 @@ A full-stack URL shortening service with click tracking and analytics, built as 
 ## 🚀 Live Demo & Repository
 
 - **GitHub Repository:** https://github.com/vaibhav211002/URL-Shortner  
-- **Live Demo:** *(Add link if deployed, e.g. frontend on Vercel & backend on Render)*
+- **Live Demo:** *url-shortner-nv3d.vercel.app/*
 
 ---
 
